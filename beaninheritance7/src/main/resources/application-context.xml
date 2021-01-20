@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="constAgeBean" class="com.example.beaninheritance7.model.Member" abstract="true">
+        <property name="age" value="25"/>
+    </bean>
+
+    <bean id="parentListBean" class="com.example.beaninheritance7.model.MemberList" abstract="true">
+        <property name="memberList">
+            <list>
+                <value>Lebron James</value>
+                <value>Kawhi Leonard</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="listBean" class="com.example.beaninheritance7.model.MemberList" parent="parentListBean">
+        <property name="memberList">
+            <list merge="true">
+                <value>Stephen Curry</value>
+                <value>Jimmy Butler</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="member" class="com.example.beaninheritance7.model.Member" parent="constAgeBean">
+        <property name="name" value="Taha"/>
+        <property name="surname" value="Topal"/>
+    </bean>
+
+</beans>

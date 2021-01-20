@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="member" class="com.example.objectinjection4.model.Member">
+        <constructor-arg name="name" value="Taha"/>
+        <constructor-arg name="surname" value="Topal"/>
+        <constructor-arg name="age" value="25"/>
+    </bean>
+
+    <bean id="employee" class="com.example.objectinjection4.model.Employee">
+        <constructor-arg name="role" value="Software Engineer"/>
+        <constructor-arg name="member" ref="member"/>
+    </bean>
+
+    <!-- Inner Bean Example -->
+    <bean id="innerBean" class="com.example.objectinjection4.model.Employee">
+        <constructor-arg name="role" value="Network"/>
+        <constructor-arg name="member">
+            <bean class="com.example.objectinjection4.model.Member">
+                <constructor-arg name="name" value="Networking"/>
+                <constructor-arg name="surname" value="Man"/>
+                <constructor-arg name="age" value="33"/>
+            </bean>
+        </constructor-arg>
+    </bean>
+
+</beans>

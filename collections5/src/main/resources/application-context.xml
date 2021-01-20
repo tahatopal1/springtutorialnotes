@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="bean" class="com.example.collections5.model.BasketballPlayers">
+        <property name="list">
+            <list>
+                <value>Magic Johnson</value>
+                <value>Michael Jordan</value>
+                <value>Lebron James</value>
+                <value>Carl Malone</value>
+                <value>Kareem AbdulJabbar</value>
+            </list>
+        </property>
+
+        <property name="map">
+            <map>
+                <entry key="Point Guard" value="Magic Johnson"/>
+                <entry key="Shooting Guard" value="Michael Jordan"/>
+                <entry key="Small Forward" value="Lebron James"/>
+                <entry key="Power Forward" value="Carl Malone"/>
+                <entry key="Center" value="Kareem AbdulJabbar"/>
+            </map>
+        </property>
+
+        <property name="properties">
+            <props>
+                <prop key="1">Point Guard</prop>
+                <prop key="2">Shooting Guard</prop>
+                <prop key="3">Small Forward</prop>
+                <prop key="4">Power Forward</prop>
+                <prop key="5">Center</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>

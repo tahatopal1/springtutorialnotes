@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+
+    <bean class="com.example.autowiredannotation13.model.Member">
+        <property name="name" value="Taha"/>
+        <property name="surname" value="Topal"/>
+        <property name="age" value="25"/>
+    </bean>
+
+    <bean id="employee" class="com.example.autowiredannotation13.model.Employee">
+        <property name="role" value="Software Engineer"/>
+    </bean>
+
+</beans>

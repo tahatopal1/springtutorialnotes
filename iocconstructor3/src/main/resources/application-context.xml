@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Bean with property name -->
+    <bean id="beanWithProp" class="com.example.iocconstructor3.model.Member">
+        <constructor-arg name="name" value="Johnny"/>
+        <constructor-arg name="surname" value="Depp"/>
+        <constructor-arg name="age" value="43"/>
+    </bean>
+
+    <!-- Bean with property index -->
+    <bean id="beanWithIndex" class="com.example.iocconstructor3.model.Member">
+        <constructor-arg index="0" value="Margot"/>
+        <constructor-arg index="1" value="Robbie"/>
+        <constructor-arg index="2" value="33"/>
+    </bean>
+
+</beans>
